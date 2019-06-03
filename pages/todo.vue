@@ -4,25 +4,6 @@
       Todo
     </p>
 
-    <p class="text-xs-center">
-      <v-btn large color="yellow accent-1" @click="execIncrement">Count Up</v-btn>
-    </p>
-
-    <v-container grid-list-xl>
-      <v-layout row justify-center>
-        <v-flex xs3>
-          <v-card dark color="primary">
-            <v-card-text>Nomal {{ nomal }}</v-card-text>
-          </v-card>
-        </v-flex>
-        <v-flex xs3>
-          <v-card color="primary">
-            <v-card-text>PlusOne {{ plusOne }}</v-card-text>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
-
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
@@ -57,20 +38,9 @@
 
 <script>
 export default {
-  computed: {
-    nomal () {
-      return this.$store.state.counter
-    },
-    plusOne () {
-      return this.$store.getters.counterPlusOne
-    },
+ computed: {
     todoDatas () {
       return this.$store.state.todo.list
-    }
-  },
-  methods: {
-    execIncrement () {
-      this.$store.commit('increment')
     }
   }
 }

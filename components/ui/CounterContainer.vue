@@ -1,14 +1,17 @@
 <template>
   <div>
-    <p class="text-xs-center display-3 font-weight-medium">Page2</p>
+    <CounterButton />
     <CounterView />
   </div>
 </template>
 
 <script>
+import CounterButton from "~/components/ui/CounterButton.vue";
 import CounterView from "~/components/ui/CounterView.vue";
-export default {
+
+export default{
   components:{
+    CounterButton,
     CounterView
   }
 }
