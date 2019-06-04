@@ -4,12 +4,12 @@
       <v-layout row justify-center>
         <v-flex xs3>
           <v-card dark color="primary">
-            <v-card-text>Nomal {{nomal}}</v-card-text>
+            <v-card-text>Nomal {{counter}}</v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs3>
           <v-card color="primary">
-            <v-card-text>PlusOne {{plusOne}}</v-card-text>
+            <v-card-text>PlusOne {{counterPlusOne}}</v-card-text>
           </v-card>
         </v-flex>
       </v-layout>
@@ -18,14 +18,21 @@
 </template>
 
 <script>
+import {mapState,mapGetters} from 'vuex'
 export default {
   computed:{
-    nomal(){
-      return this.$store.state.counter
-    },
-    plusOne(){
-      return this.$store.getters.counterPlusOne
-    }
+    ...mapState(['counter']),
+    ...mapGetters(['counterPlusOne'])
+
+
+
+  //同じ意味
+  //  nomal(){
+  //  return this.$store.state.counter
+  //},
+  //plusOne(){
+  //  return this.$store.getters.counterPlusOne
+  //}
   }
 }
 </script>
