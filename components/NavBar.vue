@@ -10,6 +10,7 @@
     <v-btn flat nuxt-link to="/page2">Page2</v-btn>
     <v-btn flat nuxt-link to="/todo">Todo</v-btn>
     <v-btn flat nuxt-link to="/firebase">Firebase</v-btn>
+    <v-btn flat nuxt-link to="/real-todo">Real Todo</v-btn>
   </v-toolbar-items>
   </v-toolbar>
 </template>
