@@ -76,8 +76,13 @@ export default {
       console.error(e)
     }
 
+    let data = []
+    if(snap.data()) {
+      data = snap.data().list
+    }
+
     return {
-      list: snap.data().list
+      list: data
     }
   },
   computed: {
